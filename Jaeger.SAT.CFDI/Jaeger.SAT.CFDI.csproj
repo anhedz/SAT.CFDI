@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F832D9C3-84D7-4057-A1D3-FDE680B0C620}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jaeger.SAT.CFDI</RootNamespace>
+    <AssemblyName>Jaeger.SAT.CFDI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cancel\Acuse.cs" />
+    <Compile Include="Cancel\AcuseFolios.cs" />
+    <Compile Include="Cancel\Body.cs" />
+    <Compile Include="Cancel\CancelaCFD.cs" />
+    <Compile Include="Cancel\CancelaCFDResponse.cs" />
+    <Compile Include="Cancel\Cancelacion.cs" />
+    <Compile Include="Cancel\CancelacionFolios.cs" />
+    <Compile Include="Cancel\CancelaResponse.cs" />
+    <Compile Include="Cancel\CanonicalizationMethodType.cs" />
+    <Compile Include="Cancel\DigestMethodType.cs" />
+    <Compile Include="Cancel\DSAKeyValueType.cs" />
+    <Compile Include="Cancel\Envelope.cs" />
+    <Compile Include="Cancel\ItemsChoiceType.cs" />
+    <Compile Include="Cancel\ItemsChoiceType1.cs" />
+    <Compile Include="Cancel\ItemsChoiceType2.cs" />
+    <Compile Include="Cancel\KeyInfoType.cs" />
+    <Compile Include="Cancel\KeyValueType.cs" />
+    <Compile Include="Cancel\ManifestType.cs" />
+    <Compile Include="Cancel\ObjectType.cs" />
+    <Compile Include="Cancel\PGPDataType.cs" />
+    <Compile Include="Cancel\ReferenceType.cs" />
+    <Compile Include="Cancel\RetrievalMethodType.cs" />
+    <Compile Include="Cancel\RSAKeyValueType.cs" />
+    <Compile Include="Cancel\SignatureMethodType.cs" />
+    <Compile Include="Cancel\SignaturePropertiesType.cs" />
+    <Compile Include="Cancel\SignaturePropertyType.cs" />
+    <Compile Include="Cancel\SignatureType.cs" />
+    <Compile Include="Cancel\SignatureValueType.cs" />
+    <Compile Include="Cancel\SignedInfoType.cs" />
+    <Compile Include="Cancel\SPKIDataType.cs" />
+    <Compile Include="Cancel\TransformsType.cs" />
+    <Compile Include="Cancel\TransformType.cs" />
+    <Compile Include="Cancel\X509DataType.cs" />
+    <Compile Include="Cancel\X509IssuerSerialType.cs" />
+    <Compile Include="Complemento\Aerolineas\V10\aerolineas.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorte10.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteEntradaSalidaMerc.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteFiguraTransporte.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteFiguraTransporteArrendatario.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteFiguraTransporteArrendatarioDomicilio.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteFiguraTransporteNotificado.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteFiguraTransporteNotificadoDomicilio.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteFiguraTransporteOperadoresOperador.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteFiguraTransporteOperadoresOperadorDomicilio.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteFiguraTransportePropietario.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteFiguraTransportePropietarioDomicilio.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteMercancias.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteMercanciasAutotransporteFederal.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteMercanciasAutotransporteFederalIdentificacionVehicular.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteMercanciasAutotransporteFederalRemolque.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteMercanciasMercancia.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteMercanciasMercanciaCantidadTransporta.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteMercanciasMercanciaDetalleMercancia.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteMercanciasMercanciaMaterialPeligroso.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteMercanciasTransporteAereo.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteMercanciasTransporteFerroviario.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteMercanciasTransporteFerroviarioCarro.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteMercanciasTransporteFerroviarioCarroContenedor.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteMercanciasTransporteFerroviarioDerechosDePaso.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteMercanciasTransporteMaritimo.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteMercanciasTransporteMaritimoContenedor.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteTranspInternac.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteUbicacion.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteUbicacionDestino.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteUbicacionDestinoNavegacionTrafico.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteUbicacionDomicilio.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteUbicacionOrigen.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\CartaPorteUbicacionOrigenNavegacionTrafico.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\ComercioExterior.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\ComercioExteriorDestinatario.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\ComercioExteriorDestinatarioDomicilio.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\ComercioExteriorEmisor.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\ComercioExteriorEmisorDomicilio.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\ComercioExteriorMercancia.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\ComercioExteriorMercanciaDescripcionesEspecificas.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\ComercioExteriorPropietario.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\ComercioExteriorReceptor.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\ComercioExteriorReceptorDomicilio.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\c_ConfigAutotransporte.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\c_Contenedor.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\c_CveTransporte.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\c_TipoCarro.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\c_TipoDeServicio.cs" />
+    <Compile Include="Complemento\CartaPorte\V10\c_TipoEstacion.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorte20.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteEntradaSalidaMerc.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteMercancias.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteMercanciasAutotransporte.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteMercanciasAutotransporteIdentificacionVehicular.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteMercanciasAutotransporteRemolque.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteMercanciasAutotransporteSeguros.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteMercanciasMercancia.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteMercanciasMercanciaCantidadTransporta.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteMercanciasMercanciaDetalleMercancia.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteMercanciasMercanciaGuiasIdentificacion.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteMercanciasMercanciaMaterialPeligroso.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteMercanciasMercanciaPedimentos.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteMercanciasTransporteAereo.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteMercanciasTransporteFerroviario.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteMercanciasTransporteFerroviarioCarro.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteMercanciasTransporteFerroviarioCarroContenedor.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteMercanciasTransporteFerroviarioDerechosDePaso.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteMercanciasTransporteMaritimo.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteMercanciasTransporteMaritimoContenedor.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteTiposFigura.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteTiposFiguraDomicilio.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteTiposFiguraPartesTransporte.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteTranspInternac.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteUbicacion.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteUbicacionDomicilio.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteUbicacionNavegacionTrafico.cs" />
+    <Compile Include="Complemento\CartaPorte\V20\CartaPorteUbicacionTipoUbicacion.cs" />
+    <Compile Include="Complemento\CFDIRegistroFiscal\cfdiregistrofiscal.cs" />
+    <Compile Include="Complemento\Detallista\detallista.cs" />
+    <Compile Include="Complemento\Divisas\V10\Divisas.cs" />
+    <Compile Include="Complemento\EstadoCuentaCombustible\V10\ecc.cs" />
+    <Compile Include="Complemento\EstadoCuentaCombustible\V10\EstadoDeCuentaCombustibleConceptoEstadoDeCuentaCombustibleTrasladoImpuesto.cs" />
+    <Compile Include="Complemento\EstadoCuentaCombustible\V11\c_claveProducto.cs" />
+    <Compile Include="Complemento\EstadoCuentaCombustible\V11\c_TAR.cs" />
+    <Compile Include="Complemento\EstadoCuentaCombustible\V11\ecc11.cs" />
+    <Compile Include="Complemento\EstadoCuentaCombustible\V11\EstadoDeCuentaCombustibleConceptoEstadoDeCuentaCombustibleTrasladoImpuesto.cs" />
+    <Compile Include="Complemento\EstadoCuentaCombustible\V12\c_ClaveTipoCombustible.cs" />
+    <Compile Include="Complemento\EstadoCuentaCombustible\V12\ecc12.cs" />
+    <Compile Include="Complemento\EstadoCuentaCombustible\V12\EstadoDeCuentaCombustibleConceptoEstadoDeCuentaCombustibleTrasladoImpuesto.cs" />
+    <Compile Include="Complemento\ImpuestosLocales\V10\implocal.cs" />
+    <Compile Include="Complemento\LeyendasFiscales\V10\LeyendasFiscales.cs" />
+    <Compile Include="Complemento\Nomina\V11\nomina11.cs" />
+    <Compile Include="Complemento\Nomina\V11\NominaHorasExtraTipoHoras.cs" />
+    <Compile Include="Complemento\Nomina\V12\nomina12.cs" />
+    <Compile Include="Complemento\Nomina\V12\NominaReceptorSindicalizado.cs" />
+    <Compile Include="Complemento\Pagos\V10\Pagos10.cs" />
+    <Compile Include="Complemento\Pagos\V20\Pagos20.cs" />
+    <Compile Include="Complemento\PersonasFisicasIntegrantes\V10\pfic.cs" />
+    <Compile Include="Complemento\TimbreFiscal\V10\TimbreFiscalDigital.cs" />
+    <Compile Include="Complemento\TimbreFiscal\V11\TimbreFiscalDigitalv11.cs" />
+    <Compile Include="Complemento\TuristaPasajeroExtranjero\V10\TuristaPasajeroExtranjero.cs" />
+    <Compile Include="Complemento\ValesDeDespensa\V10\ValesDeDespensa.cs" />
+    <Compile Include="Helper\LogErrorService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CadenaOriginal.cs" />
+    <Compile Include="Services\FileResourceService.cs" />
+    <Compile Include="Services\GetXsd.cs" />
+    <Compile Include="Services\XmlResolverService.cs" />
+    <Compile Include="Services\XsdResolverService.cs" />
+    <Compile Include="Services\XmlSerializerService.cs" />
+    <Compile Include="SPEI.cs" />
+    <Compile Include="SpeiTercero.cs" />
+    <Compile Include="V32\cfdv32.cs" />
+    <Compile Include="V32\ComprobanteImpuestosRetencionImpuesto.cs" />
+    <Compile Include="V32\ComprobanteImpuestosTrasladoImpuesto.cs" />
+    <Compile Include="V32\ComprobanteTipoDeComprobante.cs" />
+    <Compile Include="V33\cfdv33.cs" />
+    <Compile Include="V33\ComprobanteAddenda.cs" />
+    <Compile Include="V33\ComprobanteComplemento.cs" />
+    <Compile Include="V33\ComprobanteConcepto.cs" />
+    <Compile Include="V40\cfdv40.cs" />
+    <Compile Include="V40\ComprobanteAddenda.cs" />
+    <Compile Include="V40\ComprobanteComplemento.cs" />
+    <Compile Include="V40\ComprobanteConcepto.cs" />
+    <Compile Include="V40\ComprobanteInformacionGlobal.cs" />
+    <Compile Include="V40\MesesEnum.cs" />
+    <Compile Include="V40\ExportacionEnum.cs" />
+    <Compile Include="V40\ObjetoImpuestoEnum.cs" />
+    <Compile Include="V40\PeriodicidadEnum.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="xsd\aerolineas.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\catCFDI.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\catNomina.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\catPagos.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\cfdiregistrofiscal.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\cfdv3.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\cfdv32.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\cfdv33.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\consumodecombustibles.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\detallista.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\divisas.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\donat11.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\ecb.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\ecc.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\iedu.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\implocal.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\leyendasFisc.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\nomina11.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\nomina12.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\notariospublicos.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\pagoenespecie.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\Pagos10.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\pfic.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\psgecfd.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\spei.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\tdCFDI.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\terceros11.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\TimbreFiscalDigital.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\TimbreFiscalDigitalv11.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\TuristaPasajeroExtranjero.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\valesdedespensa.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\ventavehiculos11.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="xslt\AcreditamientoIEPS10.xslt" />
+    <EmbeddedResource Include="xslt\aerolineas.xslt" />
+    <EmbeddedResource Include="xslt\arrendamientoenfideicomiso.xslt" />
+    <EmbeddedResource Include="xslt\cadenaoriginal_2_0.xslt" />
+    <EmbeddedResource Include="xslt\cadenaoriginal_2_2.xslt" />
+    <EmbeddedResource Include="xslt\cadenaoriginal_3_0.xslt" />
+    <EmbeddedResource Include="xslt\cadenaoriginal_3_2.xslt" />
+    <EmbeddedResource Include="xslt\cadenaoriginal_3_3.xslt" />
+    <EmbeddedResource Include="xslt\cadenaoriginal_3_3_offline.xslt" />
+    <EmbeddedResource Include="xslt\cadenaoriginal_TFD_1_0.xslt" />
+    <EmbeddedResource Include="xslt\cadenaoriginal_TFD_1_1.xslt" />
+    <EmbeddedResource Include="xslt\certificadodedestruccion.xslt" />
+    <EmbeddedResource Include="xslt\cfdiregistrofiscal.xslt" />
+    <EmbeddedResource Include="xslt\ComercioExterior10.xslt" />
+    <EmbeddedResource Include="xslt\ComercioExterior11.xslt" />
+    <EmbeddedResource Include="xslt\consumodecombustibles.xslt" />
+    <EmbeddedResource Include="xslt\detallista.xslt" />
+    <EmbeddedResource Include="xslt\dividendos.xslt" />
+    <EmbeddedResource Include="xslt\divisas.xslt" />
+    <EmbeddedResource Include="xslt\donat.xslt" />
+    <EmbeddedResource Include="xslt\donat11.xslt" />
+    <EmbeddedResource Include="xslt\ecb.xslt" />
+    <EmbeddedResource Include="xslt\ecc.xslt" />
+    <EmbeddedResource Include="xslt\ecc11.xslt" />
+    <EmbeddedResource Include="xslt\enajenaciondeacciones.xslt" />
+    <EmbeddedResource Include="xslt\fideicomisonoempresarial.xslt" />
+    <EmbeddedResource Include="xslt\iedu.xslt" />
+    <EmbeddedResource Include="xslt\implocal.xslt" />
+    <EmbeddedResource Include="xslt\impresion.xslt" />
+    <EmbeddedResource Include="xslt\ine10.xslt" />
+    <EmbeddedResource Include="xslt\ine11.xslt" />
+    <EmbeddedResource Include="xslt\intereses.xslt" />
+    <EmbeddedResource Include="xslt\intereseshipotecarios.xslt" />
+    <EmbeddedResource Include="xslt\leyendasFisc.xslt" />
+    <EmbeddedResource Include="xslt\nomina11.xslt" />
+    <EmbeddedResource Include="xslt\nomina12.xslt" />
+    <EmbeddedResource Include="xslt\notariospublicos.xslt" />
+    <EmbeddedResource Include="xslt\obrasarteantiguedades.xslt" />
+    <EmbeddedResource Include="xslt\operacionesconderivados.xslt" />
+    <EmbeddedResource Include="xslt\pagoenespecie.xslt" />
+    <EmbeddedResource Include="xslt\Pagos10.xslt" />
+    <EmbeddedResource Include="xslt\pagosaextranjeros.xslt" />
+    <EmbeddedResource Include="xslt\pfic.xslt" />
+    <EmbeddedResource Include="xslt\planesderetiro.xslt" />
+    <EmbeddedResource Include="xslt\premios.xslt" />
+    <EmbeddedResource Include="xslt\psgcfdsp.xslt" />
+    <EmbeddedResource Include="xslt\psgecfd.xslt" />
+    <EmbeddedResource Include="xslt\renovacionysustitucionvehiculos.xslt" />
+    <EmbeddedResource Include="xslt\sectorfinanciero.xslt" />
+    <EmbeddedResource Include="xslt\sello.xslt" />
+    <EmbeddedResource Include="xslt\servicioparcialconstruccion.xslt" />
+    <EmbeddedResource Include="xslt\spei.xslt" />
+    <EmbeddedResource Include="xslt\terceros.xslt" />
+    <EmbeddedResource Include="xslt\terceros11.xslt" />
+    <EmbeddedResource Include="xslt\TuristaPasajeroExtranjero.xslt" />
+    <EmbeddedResource Include="xslt\utilerias.xslt" />
+    <EmbeddedResource Include="xslt\valesdedespensa.xslt" />
+    <EmbeddedResource Include="xslt\vehiculousado.xslt" />
+    <EmbeddedResource Include="xslt\ventavehiculos.xslt" />
+    <EmbeddedResource Include="xslt\ventavehiculos11.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="xsd\cfdv40.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\Pagos20.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\CartaPorte20.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\catCartaPorte.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\CartaPorte.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="xslt\cadenaoriginal_4_0.xslt" />
+    <EmbeddedResource Include="xslt\cadenaoriginal_4_0_offline.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="xslt\Pagos20.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="xslt\ecc12.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="xslt\CartaPorte20.xslt" />
+    <EmbeddedResource Include="xslt\consumodeCombustibles11.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="xslt\GastosHidrocarburos10.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="xslt\IngresosHidrocarburos.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="xslt\CartaPorte.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="xslt\cadenaoriginal_3_2_offline.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="xsd\certificadodedestruccion.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xsd\ComercioExterior11.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="xsd\consumodeCombustibles11.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="xsd\ecc11.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="xsd\ecc12.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="xsd\ine11.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="xsd\obrasarteantiguedades.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="xsd\renovacionysustitucionvehiculos.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="xsd\servicioparcialconstruccion.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="xsd\vehiculousado.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="xsd\catComExt.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="xsd\catCombustible.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
