@@ -169,7 +169,7 @@ namespace Jaeger.SAT.CFDI.V40 {
         [XmlIgnore]
         public Complemento.Nomina.V12.Nomina Nomina {
             get {
-                return Services.XmlSerializerService.XmlDeserializarStringXml<Complemento.Nomina.V12.Nomina>(this.Buscar("nominas12:Nomina"));
+                return Services.XmlSerializerService.XmlDeserializarStringXml<Complemento.Nomina.V12.Nomina>(this.Buscar("nomina12:Nomina"));
             }
             set {
                 var xml = new XmlDocument();

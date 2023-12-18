@@ -542,7 +542,7 @@ namespace Jaeger.SAT.CFDI.V40 {
             try {
                 return Comprobante.Deserialize(xmlString);
             } catch (Exception ex) {
-                Console.WriteLine(string.Concat("V33_LoadXML: ", ex.Message));
+                Console.WriteLine(string.Concat("V40_LoadXML: ", ex.Message));
                 return null;
             }
         }
